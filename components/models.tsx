@@ -66,14 +66,14 @@ export function Models() {
               </Link>
               <Link
                 className="flex items-center gap-3 rounded-lg px-3 py-2 text-black transition-all "
-                href="wip"
+                href="/wip"
               >
                 <UsersIcon className="h-4 w-4" />
                 Evaluations
               </Link>
               <Link
                 className="flex items-center gap-3 rounded-lg px-3 py-2 text-black transition-all "
-                href="wip"
+                href="/wip"
               >
                 <LineChartIcon className="h-4 w-4" />
                 Analytics
