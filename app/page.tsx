@@ -1,11 +1,9 @@
+import { Landingpage } from "@/components/landing-page";
 
 export default function Page() {
   return (
   <div>
-    {/* <Models /> */}
-    Sign up 
-    Login 
-    and try
+   <Landingpage />
   </div>
   );
 }

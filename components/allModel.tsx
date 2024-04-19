@@ -72,7 +72,7 @@ const AllModel = () => {
               </div>
             </TableCell>
             <TableCell>
-<Link href="/chat">
+<Link href="/dashboard/chat">
               <Badge className="w-20 hover:bg-green-400 hover:border-none  cursor-pointer rounded-md py-1 justify-center border-2" variant="success">Chat</Badge>
 
 </Link>

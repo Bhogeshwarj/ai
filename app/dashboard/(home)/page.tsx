@@ -12,16 +12,31 @@ const page = () => {
 <div className="my-auto p-5 py-48 px-20">
             <Card>
               <CardHeader className="pb-4">
-                <CardTitle>Take Notes</CardTitle>
-                <CardDescription>Save your notes here</CardDescription>
+                <CardTitle>Get Started </CardTitle>
+                <CardDescription>Select or Converse with AI here</CardDescription>
               </CardHeader>
               <CardContent className='flex '>
-                <Button className="w-1/2 mx-5" size="sm">
-                    Notes
+                <div className="w-full  mx-2  py-2" >
+                <Link href="/dashboard/models">
+                    <div>
+                <Button  className='px-10' size="sm">
+                      
+                      Models
                 </Button>
-                <Button className="w-1/2 mx-5" size="sm">
-                    Notes
+                      </div>
+                </Link>
+
+                </div>
+                <div  className="w-full mx-2 py-2">
+
+              <Link href="/dashboard/chat">
+              <Button className='px-10' size="sm">
+                   <div>
+                   Chat
+                    </div>
                 </Button>
+              </Link>  
+                </div>
               </CardContent>
             </Card>
           </div>

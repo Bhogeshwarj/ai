@@ -34,9 +34,10 @@ export function Chat() {
             <Message key={index} message={message} />
           ))}
         </div>
+    
       </main>
-      <footer className="border-t bg-white px-4 py-3 ">
-        <div className="mx-auto max-w-2xl">
+      <footer className="border-t bg-white px-4 py-3 my-20 mx-10 rounded-lg">
+      <div className="mx-auto max-w-2xl">
           <form onSubmit={handleSubmit} className="flex items-center gap-2">
             <Input
               className="flex-1 rounded-full bg-gray-100 px-4 py-2 text-gray-900 focus:outline-none "
