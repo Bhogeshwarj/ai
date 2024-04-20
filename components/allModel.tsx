@@ -57,15 +57,15 @@ const AllModel = () => {
               </div>
             </TableCell>
             <TableCell>
-              <Badge variant="success">Deployed</Badge>
+              <Badge variant="default">Deployed</Badge>
             </TableCell>
             <TableCell>
               <div className="flex items-center gap-2">
-                <Button size="icon" variant="ghost">
+                <Button size="icon" variant="default">
                   <FileEditIcon className="h-4 w-4" />
                   <span className="sr-only">Edit</span>
                 </Button>
-                <Button size="icon" variant="ghost">
+                <Button size="icon" variant="default">
                   <EyeIcon className="h-4 w-4" />
                   <span className="sr-only">View</span>
                 </Button>
@@ -73,7 +73,7 @@ const AllModel = () => {
             </TableCell>
             <TableCell>
 <Link href="/dashboard/chat">
-              <Badge className="w-20 hover:bg-green-400 hover:border-none  cursor-pointer rounded-md py-1 justify-center border-2" variant="success">Chat</Badge>
+              <Badge className="w-20 hover:bg-green-400 hover:border-none  cursor-pointer rounded-md py-1 justify-center border-2" variant="default">Chat</Badge>
 
 </Link>
             </TableCell>
@@ -108,15 +108,15 @@ const AllModel = () => {
               </div>
             </TableCell>
             <TableCell>
-              <Badge variant="success">In Review</Badge>
+              <Badge variant="default">In Review</Badge>
             </TableCell>
             <TableCell>
               <div className="flex items-center gap-2">
-                <Button size="icon" variant="ghost">
+                <Button size="icon" variant="default">
                   <FileEditIcon className="h-4 w-4" />
                   <span className="sr-only">Edit</span>
                 </Button>
-                <Button size="icon" variant="ghost">
+                <Button size="icon" variant="default">
                   <EyeIcon className="h-4 w-4" />
                   <span className="sr-only">View</span>
                 </Button>
@@ -124,7 +124,7 @@ const AllModel = () => {
             </TableCell>
             <TableCell>
 
-              <Badge className="w-20 hover:bg-green-400 hover:border-none  cursor-pointer rounded-md py-1 justify-center border-2" variant="success">Chat</Badge>
+              <Badge className="w-20 hover:bg-green-400 hover:border-none  cursor-pointer rounded-md py-1 justify-center border-2" variant="default">Chat</Badge>
 
             </TableCell>
           </TableRow>
@@ -157,15 +157,15 @@ const AllModel = () => {
               </div>
             </TableCell>
             <TableCell>
-              <Badge variant="success">In Review</Badge>
+              <Badge variant="default">In Review</Badge>
             </TableCell>
             <TableCell>
               <div className="flex items-center gap-2">
-                <Button size="icon" variant="ghost">
+                <Button size="icon" variant="default">
                   <FileEditIcon className="h-4 w-4" />
                   <span className="sr-only">Edit</span>
                 </Button>
-                <Button size="icon" variant="ghost">
+                <Button size="icon" variant="default">
                   <EyeIcon className="h-4 w-4" />
                   <span className="sr-only">View</span>
                 </Button>
@@ -173,7 +173,7 @@ const AllModel = () => {
             </TableCell>
             <TableCell>
 
-              <Badge className="w-20 hover:bg-green-400 hover:border-none  cursor-pointer rounded-md py-1 justify-center border-2" variant="success">Chat</Badge>
+              <Badge className="w-20 hover:bg-green-400 hover:border-none  cursor-pointer rounded-md py-1 justify-center border-2" variant="default">Chat</Badge>
 
             </TableCell>
           </TableRow>
@@ -206,15 +206,15 @@ const AllModel = () => {
               </div>
             </TableCell>
             <TableCell>
-              <Badge variant="warning">In Review</Badge>
+              <Badge variant="default">In Review</Badge>
             </TableCell>
             <TableCell>
               <div className="flex items-center gap-2">
-                <Button size="icon" variant="ghost">
+                <Button size="icon" variant="default">
                   <FileEditIcon className="h-4 w-4" />
                   <span className="sr-only">Edit</span>
                 </Button>
-                <Button size="icon" variant="ghost">
+                <Button size="icon" variant="default">
                   <EyeIcon className="h-4 w-4" />
                   <span className="sr-only">View</span>
                 </Button>
@@ -222,7 +222,7 @@ const AllModel = () => {
             </TableCell>
             <TableCell>
 
-              <Badge className="w-20 hover:bg-green-400 hover:border-none  cursor-pointer rounded-md py-1 justify-center border-2" variant="success">Chat</Badge>
+              <Badge className="w-20 hover:bg-green-400 hover:border-none  cursor-pointer rounded-md py-1 justify-center border-2" variant="default">Chat</Badge>
 
             </TableCell>
           </TableRow>
@@ -255,15 +255,15 @@ const AllModel = () => {
               </div>
             </TableCell>
             <TableCell>
-              <Badge variant="success">In Review</Badge>
+              <Badge variant="default">In Review</Badge>
             </TableCell>
             <TableCell>
               <div className="flex items-center gap-2">
-                <Button size="icon" variant="ghost">
+                <Button size="icon" variant="default">
                   <FileEditIcon className="h-4 w-4" />
                   <span className="sr-only">Edit</span>
                 </Button>
-                <Button size="icon" variant="ghost">
+                <Button size="icon" variant="default">
                   <EyeIcon className="h-4 w-4" />
                   <span className="sr-only">View</span>
                 </Button>
@@ -271,7 +271,7 @@ const AllModel = () => {
             </TableCell>
             <TableCell>
 
-              <Badge className="w-20 hover:bg-green-400 hover:border-none  cursor-pointer rounded-md py-1 justify-center border-2" variant="success">Chat</Badge>
+              <Badge className="w-20 hover:bg-green-400 hover:border-none  cursor-pointer rounded-md py-1 justify-center border-2" variant="default">Chat</Badge>
 
             </TableCell>
           </TableRow>
@@ -304,15 +304,15 @@ const AllModel = () => {
               </div>
             </TableCell>
             <TableCell>
-              <Badge variant="warning">In Review</Badge>
+              <Badge variant="default">In Review</Badge>
             </TableCell>
             <TableCell>
               <div className="flex items-center gap-2">
-                <Button size="icon" variant="ghost">
+                <Button size="icon" variant="default">
                   <FileEditIcon className="h-4 w-4" />
                   <span className="sr-only">Edit</span>
                 </Button>
-                <Button size="icon" variant="ghost">
+                <Button size="icon" variant="default">
                   <EyeIcon className="h-4 w-4" />
                   <span className="sr-only">View</span>
                 </Button>
@@ -320,7 +320,7 @@ const AllModel = () => {
             </TableCell>
             <TableCell>
 
-              <Badge className="w-20 hover:bg-green-400 hover:border-none  cursor-pointer rounded-md py-1 justify-center border-2" variant="success">Chat</Badge>
+              <Badge className="w-20 hover:bg-green-400 hover:border-none  cursor-pointer rounded-md py-1 justify-center border-2" variant="default">Chat</Badge>
 
             </TableCell>
           </TableRow>
@@ -333,7 +333,7 @@ const AllModel = () => {
 
 export default AllModel
 
-function FileEditIcon(props) {
+function FileEditIcon(props:any) {
   return (
     <svg
       {...props}
@@ -354,7 +354,7 @@ function FileEditIcon(props) {
   )
 }
 
-function EyeIcon(props) {
+function EyeIcon(props:any) {
     return (
       <svg
         {...props}

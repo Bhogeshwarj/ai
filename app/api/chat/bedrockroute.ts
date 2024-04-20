@@ -8,7 +8,7 @@ const bedrockClient = new BedrockRuntimeClient({
   },
 });
 
-export async function POST(req) {
+export async function POST(req:any) {
   try {
     // Extract the `messages` from the body of the request
     const message = await req.json();

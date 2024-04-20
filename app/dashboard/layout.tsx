@@ -128,7 +128,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   )
 }
 
-function BellIcon(props) {
+function BellIcon(props:any) {
   return (
     <svg
       {...props}
@@ -155,7 +155,7 @@ function BellIcon(props) {
 
 
 
-function HomeIcon(props) {
+function HomeIcon(props:any) {
   return (
     <svg
       {...props}
@@ -176,7 +176,7 @@ function HomeIcon(props) {
 }
 
 
-function LineChartIcon(props) {
+function LineChartIcon(props:any) {
   return (
     <svg
       {...props}
@@ -197,7 +197,7 @@ function LineChartIcon(props) {
 }
 
 
-function MountainIcon(props) {
+function MountainIcon(props:any) {
   const { width, height, color, strokeWidth } = props;
 
   return (
@@ -218,7 +218,7 @@ function MountainIcon(props) {
 }
 
 
-function PackageIcon(props) {
+function PackageIcon(props:any) {
   return (
     <svg
       {...props}
@@ -241,7 +241,7 @@ function PackageIcon(props) {
 }
 
 
-function SearchIcon(props) {
+function SearchIcon(props:any) {
   return (
     <svg
       {...props}
@@ -262,7 +262,7 @@ function SearchIcon(props) {
 }
 
 
-function UsersIcon(props) {
+function UsersIcon(props:any) {
   return (
     <svg
       {...props}

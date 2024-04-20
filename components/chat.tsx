@@ -20,10 +20,10 @@ export function Chat() {
           <h2 className="text-lg font-semibold text-gray-900 ">AI Assistant</h2>
         </div>
         <div className="flex items-center gap-2">
-          <Button size="icon" variant="ghost">
+          <Button size="icon" variant="default">
             <SearchIcon className="h-5 w-5 text-gray-500 hover:text-white" />
           </Button>
-          <Button size="icon" variant="ghost" >
+          <Button size="icon" variant="default" >
             <SettingsIcon className="h-5 w-5 text-gray-500 hover:text-white" />
           </Button>
         </div>
@@ -46,7 +46,7 @@ export function Chat() {
               value={input}
               onChange={handleInputChange}
             />
-            <Button className="rounded-full" size="icon" variant="primary">
+            <Button className="rounded-full" size="icon" variant="default">
               <SendIcon className="h-5 w-5 text-black hover:text-green-400" />
             </Button>
           </form>
