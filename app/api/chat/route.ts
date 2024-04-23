@@ -16,18 +16,26 @@ const buildGoogleGenAIPrompt = (messages: Message[]) => ({
       parts: [{ text: message.content }],
     })),
 });
- 
 export async function POST(req: Request) {
-  // Extract the `prompt` from the body of the request
-  const { messages } = await req.json();
- 
-  const geminiStream = await genAI
-    .getGenerativeModel({ model: 'gemini-pro' })
-    .generateContentStream(buildGoogleGenAIPrompt(messages));
- 
-  // Convert the response into a friendly text-stream
-  const stream = GoogleGenerativeAIStream(geminiStream);
- 
-  // Respond with the stream
-  return new StreamingTextResponse(stream);
+  try {
+    const { messages } = await req.json();
+
+    console.log("Received messages:", messages);
+
+    const geminiStream = await genAI
+      .getGenerativeModel({ model: 'gemini-pro' })
+      .generateContentStream(buildGoogleGenAIPrompt(messages));
+
+    console.log("Generated Gemini stream:", geminiStream);
+
+    // Convert the response into a friendly text-stream
+    const stream = GoogleGenerativeAIStream(geminiStream);
+
+    console.log("Converted stream:", stream);
+
+    return new StreamingTextResponse(stream);
+  } catch (error) {
+    console.error("Internal server error:", error);
+    return new Response("Internal server error", { status: 500 });
+  }
 }
