@@ -16,15 +16,26 @@ const buildGoogleGenAIPrompt = (messages: Message[]) => ({
       parts: [{ text: message.content }],
     })),
 });
-export async function POST(req: Request) {
-  try {
-    const { messages } = await req.json();
 
+   // Get the API key from the query parameter
+  //  const {searchParams} = new URL(req.url);
+  //  const apiKey = searchParams.get('key');
+
+  //  // Validate the API key
+  //  if (!apiKey) {
+  //    return res.status(401).json({ message: 'Invalid API key' });
+  //  }
+  export async function POST(req: Request,res:Response) {
+    try {
+      // const apiKey = process.env.GOOGLE_API_KEY;
+    const { messages } = await req.json();
+    
     console.log("Received messages:", messages);
+    //  const genAI = new GoogleGenerativeAI(apiKey);
 
     const geminiStream = await genAI
-      .getGenerativeModel({ model: 'gemini-pro' })
-      .generateContentStream(buildGoogleGenAIPrompt(messages));
+    .getGenerativeModel({ model: 'gemini-pro' })
+    .generateContentStream(buildGoogleGenAIPrompt(messages));
 
     console.log("Generated Gemini stream:", geminiStream);
 
