@@ -1,7 +1,7 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { GoogleGenerativeAIStream, Message, StreamingTextResponse } from 'ai';
  
-const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY || '');
+const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
  
 // IMPORTANT! Set the runtime to edge
 export const runtime = 'edge';
@@ -17,17 +17,9 @@ const buildGoogleGenAIPrompt = (messages: Message[]) => ({
     })),
 });
 
-   // Get the API key from the query parameter
-  //  const {searchParams} = new URL(req.url);
-  //  const apiKey = searchParams.get('key');
-
-  //  // Validate the API key
-  //  if (!apiKey) {
-  //    return res.status(401).json({ message: 'Invalid API key' });
-  //  }
   export async function POST(req: Request,res:Response) {
     try {
-      // const apiKey = process.env.GOOGLE_API_KEY;
+
     const { messages } = await req.json();
     
     console.log("Received messages:", messages);
