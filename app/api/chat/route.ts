@@ -1,7 +1,6 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { GoogleGenerativeAIStream, Message, StreamingTextResponse } from 'ai';
  
-const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
  
 // IMPORTANT! Set the runtime to edge
 export const runtime = 'edge';
@@ -19,6 +18,7 @@ const buildGoogleGenAIPrompt = (messages: Message[]) => ({
 
   export async function POST(req: Request,res:Response) {
     try {
+      const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY);
 
     const { messages } = await req.json();
     
@@ -26,7 +26,7 @@ const buildGoogleGenAIPrompt = (messages: Message[]) => ({
     //  const genAI = new GoogleGenerativeAI(apiKey);
 
     const geminiStream = await genAI
-    .getGenerativeModel({ model: 'gemini-pro' })
+    .getGenerativeModel({ model: 'gemini-1.5-pro-latest' })
     .generateContentStream(buildGoogleGenAIPrompt(messages));
 
     console.log("Generated Gemini stream:", geminiStream);
