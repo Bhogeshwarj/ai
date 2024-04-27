@@ -18,7 +18,7 @@ const buildGoogleGenAIPrompt = (messages: Message[]) => ({
 
   export async function POST(req: Request,res:Response) {
     try {
-      const API_KEY = process.env.GOOGLE_API_KEY
+     const API_KEY = process.env.GOOGLE_API_KEY
       const genAI = new GoogleGenerativeAI(API_KEY);
 
     const { messages } = await req.json();
