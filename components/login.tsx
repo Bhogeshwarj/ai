@@ -45,7 +45,7 @@ export function Login() {
               <Input id="password" value={password} onChange={(e) => setPassword(e.target.value)} required type="password" />
             </div>
             <Button onClick={submitHandler}className="w-full" type="submit">
-              Sign up
+                Login
             </Button>
           </div>
         </form>

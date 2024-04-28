@@ -7,46 +7,40 @@ import Link from "next/link"
 import { useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation"; // Correct import for useRouter
+import { signup } from "@/actions/user"
 
 export function Signup() {
   const router = useRouter();
+  // TODO : remove this use state and use https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations i.e. use formState
   const [name, setName] = useState(''); // State for name
   const [username, setUsername] = useState(''); // State for username
   const [email, setEmail] = useState(''); // State for email
   const [password, setPassword] = useState(''); // State for password
+  const [errorMessage, setErrorMessage] = useState('');
 
-// TODO
-  // import client from "@/db"
-  
-  // export async function signup(username: string, password: string) {
-  //     // should add zod validation here
-  //     const user = await client.user.create({
-  //         data: {
-  //             username: username,
-  //             password: password
-  //         }
-  //     });
-  
-  //     console.log(user.id);
-  
-  //     return "Signed up!"
-  // }
   async function submitHandler(event) {
     event.preventDefault(); // Prevent default form submission
-    try {
-      const response = await axios.post("http://localhost:3000/api/user", {
-        name: name, // Pass name from state
-        username: username, // Pass username from state
-        email: email, // Pass email from state
-        password: password // Pass password from state
-      });
-      console.log("User created:", response.data);
-      router.push('/');
-    } catch (error) {
-      console.error("Error creating user:", error);
-    }
-  }
+try{
 
+  const response = await axios.post("/api/user", {
+    name: name, // Pass name from state
+    username: username, // Pass username from state
+    email: email, // Pass email from state
+    password: password // Pass password from state
+  });
+  const data = await response.data;
+  console.log(data)
+  router.push('/dashboard');
+}catch(err){
+  console.log(err)
+  setErrorMessage("Username or email already exists !");
+}
+}
+// async function submitHandler(){
+
+//     const response = await signup(name,email,username, password);
+//     router.push('/dashboard');
+// }
   return (
     <div className="flex h-screen w-full items-center justify-center bg-gray-100 px-4 ">
       <div className="w-full max-w-md space-y-6">
@@ -71,6 +65,10 @@ export function Signup() {
             <div className="space-y-2">
               <Label htmlFor="password">Password</Label>
               <Input id="password" value={password} onChange={(e) => setPassword(e.target.value)} required type="password" />
+            </div>
+            <div>
+
+            {errorMessage && <p className="text-red-500 text-sm text-center">{errorMessage}</p>}
             </div>
             <Button onClick={submitHandler}className="w-full" type="submit">
               Sign up
