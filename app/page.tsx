@@ -2,7 +2,7 @@ import { Landingpage } from "@/components/landing-page";
 
 export default function Page() {
   return (
-  <div>
+  <div> 
    <Landingpage />
   </div>
   );
