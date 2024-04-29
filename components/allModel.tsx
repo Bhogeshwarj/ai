@@ -124,8 +124,10 @@ const AllModel = () => {
             </TableCell>
             <TableCell>
 
+            <Link href="/dashboard/gpt">
               <Badge className="w-20 hover:bg-green-400 hover:border-none  cursor-pointer rounded-md py-1 justify-center border-2" variant="default">Chat</Badge>
 
+</Link>
             </TableCell>
           </TableRow>
           <TableRow>

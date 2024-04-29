@@ -23,19 +23,14 @@ const buildGoogleGenAIPrompt = (messages: Message[]) => ({
 
     const { messages } = await req.json();
     
-    console.log("Received messages:", messages);
     //  const genAI = new GoogleGenerativeAI(apiKey);
 
     const geminiStream = await genAI
     .getGenerativeModel({ model: 'gemini-1.5-pro-latest' })
     .generateContentStream(buildGoogleGenAIPrompt(messages));
 
-    console.log("Generated Gemini stream:", geminiStream);
-
     // Convert the response into a friendly text-stream
     const stream = GoogleGenerativeAIStream(geminiStream);
-
-    console.log("Converted stream:", stream);
 
     return new StreamingTextResponse(stream);
   } catch (error) {
