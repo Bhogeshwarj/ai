@@ -36,11 +36,6 @@ try{
   setErrorMessage("Username or email already exists !");
 }
 }
-// async function submitHandler(){
-
-//     const response = await signup(name,email,username, password);
-//     router.push('/dashboard');
-// }
   return (
     <div className="flex h-screen w-full items-center justify-center bg-gray-100 px-4 ">
       <div className="w-full max-w-md space-y-6">

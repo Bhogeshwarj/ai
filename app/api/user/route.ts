@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
         }
     });
     await createCookie(user);
-    return NextResponse.json({ message: " Signed up" },user);
+    return NextResponse.json({ message: " Signed up" });
     
 }
 async function createCookie(user){
