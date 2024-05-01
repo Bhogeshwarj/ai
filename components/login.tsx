@@ -16,9 +16,9 @@ export function Login() {
   async function submitHandler(event) {
     event.preventDefault(); // Prevent default form submission
     try {
-      const response = await axios.get("http://localhost:3000/api/user", {
-    //    username:username , // Pass username from state
-        // password: password // Pass password from state
+      const response = await axios.post("/api/user/login", {
+       username:username , 
+        password: password 
       });
       console.log("User created:", response.data);
       router.push('/');

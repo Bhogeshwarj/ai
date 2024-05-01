@@ -41,24 +41,21 @@ async function createCookie(user){
 
 // }
 
-export async function GET(req:NextRequest) {
-    const {searchParams} = new URL(req.url);
-    const email = searchParams.get('email');
-    const username = searchParams.get('username');
-    const name = searchParams.get('name');
-    const data = {
-        email,
-        username,
-    }
-    // console.log(body);
-    const user = await prisma.user.findFirst({
-                where:{
-                    email:data?.email,
-                    username:data?.username,
-                }
-            });
-    if(!user){
-        return Response.json({message:"no user nme found"})
-    }
-    return Response.json({name:user.name,username:user.username,email:user.email  })
-  }
+// export async function GET(req:NextRequest) {
+//     const body = await req.json();
+//     // const data = {
+//     //     body.email,
+//     //     body.username,
+//     // }
+//     // console.log(body);
+//     const user = await prisma.user.findFirst({
+//                 where:{
+//                     email:data?.email,
+//                     username:data?.username,
+//                 }
+//             });
+//     if(!user){
+//         return Response.json({message:"no user nme found"})
+//     }
+//     return Response.json({name:user.name,username:user.username,email:user.email  })
+//   }
